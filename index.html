@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101010" />
+  <meta name="description" content="Discover Anyakuma, Abuja-based recording artist. Explore music, join the community, and enquire about bookings and sponsorships." />
+  <title>ANYAKUMA | Official Artist Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#home">ANYAKUMA<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="navigation">
+      <a href="#music">Music</a>
+      <a href="#community">Community</a>
+      <a href="#booking">Bookings</a>
+      <a href="#about">About</a>
+      <a href="#booking" class="nav-cta">Work With Me ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">INDEPENDENT ARTIST · ABUJA, NIGERIA</span>
+        <h1>THE SOUND.<br />THE STORY.<br /><span>ANYAKUMA.</span></h1>
+        <p>More than music. A movement, a community, and a sound that speaks for itself. Welcome to my world.</p>
+        <div class="hero-actions">
+          <a href="#music" class="button button-primary">Explore Music ↗</a>
+          <a href="#community" class="button button-outline">Join the Community</a>
+        </div>
+        <p class="hero-note">Independent spirit. Unfiltered expression.</p>
+      </div>
+      <div class="hero-art">
+        <div class="art-frame">
+          <div class="art-caption"><span>ARTIST / 001</span><span>ABUJA, NG</span></div>
+          <div class="art-center"><span class="art-symbol">A.</span><p>BUILT ON SOUND</p></div>
+          <span class="art-bottom">NO SHORTCUTS. JUST MUSIC.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Artist highlights">
+      <span>MUSIC</span><span>✳</span><span>CULTURE</span><span>✳</span><span>COMMUNITY</span><span>✳</span><span>ABUJA TO THE WORLD</span>
+    </section>
+
+    <section class="section" id="music">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE DISCOGRAPHY</span><h2>Music that <span>moves.</span></h2></div>
+        <p>Singles, projects, and the stories behind the sound.</p>
+      </div>
+      <div class="music-tools">
+        <input id="musicSearch" type="search" placeholder="Search tracks or projects..." aria-label="Search music" />
+        <select id="musicFilter" aria-label="Filter music">
+          <option value="all">All releases</option><option value="single">Singles</option><option value="ep">EPs</option><option value="album">Albums</option>
+        </select>
+      </div>
+      <div class="music-grid" id="musicGrid"></div>
+      <p class="empty-state" id="musicEmpty" hidden>No releases match your search.</p>
+    </section>
+
+    <section class="community section" id="community">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE INNER CIRCLE</span><h2>This is <span>our space.</span></h2></div>
+        <p>Get updates, share your thoughts, and be part of the journey.</p>
+      </div>
+      <div class="community-grid">
+        <div class="community-intro">
+          <span class="community-mark">A.</span>
+          <h3>You're not just a listener.</h3>
+          <p>You're part of the story. Sign up for release news, exclusive updates, and announcements from Anyakuma.</p>
+          <form id="joinForm" class="stack-form">
+            <label for="fanName">Your name</label>
+            <input id="fanName" name="name" required maxlength="80" placeholder="What should we call you?" />
+            <label for="fanEmail">Email address</label>
+            <input id="fanEmail" name="email" type="email" required maxlength="254" placeholder="you@example.com" />
+            <button class="button button-primary" type="submit">Join the Community ↗</button>
+            <p class="form-message" id="joinMessage" role="status"></p>
+          </form>
+        </div>
+        <div class="fan-wall">
+          <div class="wall-heading"><h3>Community wall</h3><span class="live-dot">OPEN TO ALL</span></div>
+          <p class="muted">Leave a message, share your favourite track, or send some love.</p>
+          <form id="postForm" class="stack-form">
+            <input id="postName" maxlength="50" required placeholder="Your display name" aria-label="Display name" />
+            <textarea id="postText" maxlength="400" required rows="3" placeholder="What's on your mind?" aria-label="Community message"></textarea>
+            <button class="button button-primary" type="submit">Post Message</button>
+            <p class="form-message" id="postMessage" role="status"></p>
+          </form>
+          <div id="postFeed" class="post-feed"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking section" id="booking">
+      <div class="section-heading">
+        <div><span class="eyebrow">LET'S MAKE IT HAPPEN</span><h2>Bring Anyakuma <span>to your stage.</span></h2></div>
+        <p>Live performances, brand partnerships, features, and creative collaborations start here.</p>
+      </div>
+      <div class="booking-grid">
+        <div class="booking-copy">
+          <h3>For event planners, brands & collaborators.</h3>
+          <p>Tell us about your event or campaign. Include the date, location, and what you have in mind so the team can follow up.</p>
+          <div class="booking-detail"><span>01</span><div><strong>Live performances</strong><p>Concerts, festivals, private events.</p></div></div>
+          <div class="booking-detail"><span>02</span><div><strong>Brand partnerships</strong><p>Campaigns, endorsements, sponsorships.</p></div></div>
+          <div class="booking-detail"><span>03</span><div><strong>Music & media</strong><p>Features, interviews, creative projects.</p></div></div>
+        </div>
+        <form id="bookingForm" class="booking-form">
+          <label for="contactName">Full name / Organisation</label>
+          <input id="contactName" name="contactName" required maxlength="120" />
+          <label for="contactEmail">Business email</label>
+          <input id="contactEmail" name="contactEmail" type="email" required maxlength="254" />
+          <label for="contactType">Enquiry type</label>
+          <select id="contactType" name="type" required>
+            <option value="">Choose an enquiry</option><option>Live performance</option><option>Brand sponsorship</option><option>Music collaboration</option><option>Media / interview</option><option>Other</option>
+          </select>
+          <label for="eventDate">Proposed event date</label><input id="eventDate" name="eventDate" type="date" />
+          <label for="eventLocation">Location</label><input id="eventLocation" name="location" placeholder="e.g. Abuja, FCT" maxlength="150" />
+          <label for="budget">Budget range (optional)</label>
+          <select id="budget" name="budget">
+            <option value="">Prefer not to say</option><option>Under ₦250,000</option><option>₦250,000 – ₦500,000</option><option>₦500,000 – ₦1,000,000</option><option>₦1,000,000+</option><option>Open to discussion</option>
+          </select>
+          <label for="brief">Tell us about the opportunity</label>
+          <textarea id="brief" name="brief" required maxlength="2000" rows="5" placeholder="Event details, audience, partnership goals..."></textarea>
+          <button class="button button-primary" type="submit">Prepare Enquiry ↗</button>
+          <p class="muted small">This demo prepares an email in your email app. It does not transmit or store enquiries on a server.</p>
+          <p class="form-message" id="bookingMessage" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <span class="eyebrow">THE ARTIST BEHIND THE SOUND</span>
+      <h2>From Abuja.<br /><span>For everywhere.</span></h2>
+      <p>Anyakuma is an independent artist building a catalogue, connecting with listeners, and creating opportunities through music. Discover the releases, follow the journey, and get in touch for the next collaboration.</p>
+      <a href="#booking" class="button button-outline">Start a Conversation ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#home">ANYAKUMA<span>.</span></a>
+    <p>Independent music. Shared energy.</p>
+    <div class="footer-links"><a href="#music">Music</a><a href="#community">Community</a><a href="#booking">Bookings</a></div>
+    <p class="copyright">© <span id="year"></span> Anyakuma. All rights reserved.</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
